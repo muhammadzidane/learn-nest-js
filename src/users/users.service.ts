@@ -5,22 +5,44 @@ import { UpdateUserDto } from './dto/update-user.dto';
 @Injectable()
 export class UsersService {
   create(createUserDto: CreateUserDto) {
-    return 'This action adds a new user';
+    console.log(createUserDto);
+
+    return {
+      statusCode: 200,
+      message: 'Success!',
+      data: createUserDto,
+    };
   }
 
   findAll() {
-    return `This action returns all users`;
+    return {
+      statusCode: 200,
+      message: 'Success!',
+      data: `This action returns all users`,
+    };
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  findOne(id: number, location: string) {
+    return {
+      statusCode: 200,
+      message: 'Success!',
+      data: `This action returns a #${id} user, located at ${location}`,
+    };
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+    return {
+      statusCode: 200,
+      message: 'Success!',
+      data: `This action updates a #${id} user`,
+    };
   }
 
   remove(id: number) {
-    return `This action removes a #${id} user`;
+    return {
+      statusCode: 200,
+      message: 'Success!',
+      data: `This action removes a #${id} user`,
+    };
   }
 }
